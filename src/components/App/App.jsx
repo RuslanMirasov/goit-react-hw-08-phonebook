@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <main className={css.main}>
-      <h1 hidden>React HW-07-Phonebook</h1>
+      <h1 hidden>React HW-08-Phonebook</h1>
 
       <Section title="Phonebook">
         <ContactForm />
