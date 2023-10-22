@@ -1,0 +1,18 @@
+.Navigation {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.NavLink {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.NavLink:hover,
+.NavLink:focus {
+  color: #3ec58e;
+}

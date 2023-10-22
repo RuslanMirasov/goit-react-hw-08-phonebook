@@ -1,0 +1,25 @@
+.Logo {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.Logo img {
+  width: 40px;
+  display: block;
+  margin-right: 10px;
+}
+
+.Logo p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.Logo:hover p,
+.Logo:focus p {
+  color: #3ec58e;
+}

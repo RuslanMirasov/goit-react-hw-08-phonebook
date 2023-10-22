@@ -1,0 +1,19 @@
+.Footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 20px;
+  background: #032541;
+  color: #fff;
+}
+
+.Footer .FooterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1080px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}

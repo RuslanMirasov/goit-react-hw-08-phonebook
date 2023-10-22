@@ -18,10 +18,10 @@
 .sectionTitle {
   display: block;
   width: 100%;
+  font-size: 40px;
   text-align: left;
-  text-transform: uppercase;
   margin-bottom: 30px;
-  color: #556b85;
+  color: #032541;
 }
 
 @media screen and (max-width: 767px) {

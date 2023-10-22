@@ -7,7 +7,7 @@ export function formValidation(form) {
     } else {
       const inputPattern = required.pattern;
       const errorText = required.title;
-      if (new RegExp(inputPattern).test(required.value)) {
+      if (!new RegExp(inputPattern).test(required.value)) {
         addErrorMarkup(requiredLabel, errorText);
       }
     }
@@ -15,10 +15,7 @@ export function formValidation(form) {
     function addErrorMarkup(correntLabel, text) {
       const errors = correntLabel.querySelectorAll('.label__error').length;
       if (errors < 1) {
-        correntLabel.insertAdjacentHTML(
-          'beforeend',
-          `<span class="label__error">${text}</span>`
-        );
+        correntLabel.insertAdjacentHTML('beforeend', `<span class="label__error">${text}</span>`);
       }
       required.classList.add('red');
       checker = false;

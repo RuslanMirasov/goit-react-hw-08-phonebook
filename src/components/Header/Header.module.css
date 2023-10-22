@@ -1,0 +1,22 @@
+.Header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #032541;
+  padding: 20px;
+}
+
+.Header .HeaderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
+  gap: 20px;
+}
+
+.Header .HeaderContainer nav {
+  margin-right: auto;
+}

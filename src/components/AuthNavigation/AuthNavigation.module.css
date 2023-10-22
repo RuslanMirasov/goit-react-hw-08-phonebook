@@ -1,0 +1,28 @@
+.AuthNavigation {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.AuthLink {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.AuthNavigation li:before {
+  content: '|';
+  display: inline-block;
+  margin: 0px 10px;
+  color: #fff;
+}
+
+.AuthNavigation li:first-child:before {
+  content: none;
+}
+
+.AuthLink:hover,
+.AuthLink:focus {
+  color: #3ec58e;
+}
