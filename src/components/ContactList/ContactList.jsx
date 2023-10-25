@@ -8,7 +8,6 @@ export const ContactList = () => {
   const filter = useSelector(getFilter);
   const filteredContacts = contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()));
   const dispatch = useDispatch();
-  console.log(filteredContacts);
 
   return (
     <ul className={css.contactList}>

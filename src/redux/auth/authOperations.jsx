@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { onLogin, onRegister, onLogout, onGetCurrentUser, token } from 'Services/Api';
+import { onLogin, onRegister, onLogout, onGetCurrentUser, setToken } from '../../Services/Api';
 
 export const register = createAsyncThunk('auth/register', async (credentials, thunkAPI) => {
   try {
@@ -15,7 +15,7 @@ export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI
     const data = await onLogin(credentials);
     return data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    return thunkAPI.rejectWithValue('Incorrect login or password');
   }
 });
 
@@ -32,10 +32,10 @@ export const getCurrentUser = createAsyncThunk('auth/refresh', async (_, thunkAP
   const state = thunkAPI.getState();
   const savedToken = state.auth.token;
   if (savedToken === null) {
-    return thunkAPI.rejectWithValue('Unable to fetch user');
+    return thunkAPI.rejectWithValue('Authorize to access your contacts');
   }
-  token.set(savedToken);
   try {
+    setToken(savedToken);
     const data = await onGetCurrentUser();
     return data;
   } catch (error) {

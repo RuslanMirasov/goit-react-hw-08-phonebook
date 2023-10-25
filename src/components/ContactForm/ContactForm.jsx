@@ -47,7 +47,7 @@ export const ContactForm = () => {
           type="text"
           name="name"
           value={name}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          pattern="[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces."
           required
           placeholder="Enter your name"
@@ -62,7 +62,7 @@ export const ContactForm = () => {
           type="tel"
           name="number"
           value={number}
-          pattern="[^0-9\+ ()\-]"
+          pattern="[0-9]+(([+() -]))*$"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           placeholder="Enter your phone number"
